@@ -15,6 +15,7 @@ class MainContentFeed extends Component {
 
   render() {
     return (
+    	<Router>
     	<div>
 	     <div className="row">
 	  		<div className="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -26,12 +27,19 @@ class MainContentFeed extends Component {
 				</div>
 		  		
 	  		</div>
+	  		
+	  	
+	  	</div>
+	  	
+
+	  		<Route path="/Photo" component={MainContentFeedPhoto}/>
+	  		<Route path="/Album" component={MainContentFeedAlbum}/>
+	  	
 	  	</div>
 
-	  	<Route path="/Photo" component={MainContentFeedPhoto}/>
-	  	<Route path="/Album" component={MainContentFeedAlbum}/>
+	  	</Router>
 
-	  	</div>
+	  	
     );
   }
 }

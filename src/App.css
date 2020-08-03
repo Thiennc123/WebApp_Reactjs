@@ -106,3 +106,7 @@ ul li a{
 .error{
   color: red;
 }
+
+#test{
+  height: 15%;
+}
