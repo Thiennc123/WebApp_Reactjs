@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
 
+import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 
 class MyPhoto extends Component {
 
@@ -16,7 +17,7 @@ class MyPhoto extends Component {
       <div className="row">
   		<div className="col-sm-12 col-md-12 col-lg-12 col-xl-12">
 	  		<div className="btn-group d-flex justify-content-end mt-3" role="group" aria-label="Basic example">
-			  <button type="button" className="btn btn-success"><a href="{{url('AddPhoto')}}" style={{color: "white"}}>Add new Photo</a></button>
+			  <NavLink exact to="/AddPhoto" className="btn btn-success ">New Photo</NavLink>
 			  
 			</div>
 	  		
