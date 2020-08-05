@@ -20,6 +20,7 @@ class App extends React.Component
 						id: 1,
 						title: "photo1",
 						discrit: "day la anh 1",
+						state:"Public",
 						link:'https://anhnendep.net/wp-content/uploads/2018/10/anh-gai-dep-diu-dang-8.jpg'
 					},
 
@@ -27,12 +28,14 @@ class App extends React.Component
 						id: 2,
 						title: "photo2",
 						discrit: "day la anh 2",
+						state:"Public",
 						link:'https://anhnendep.net/wp-content/uploads/2018/10/anh-gai-dep-diu-dang-8.jpg'
 					},
 					{
 						id: 3,
 						title: "photo3",
 						discrit: "day la anh 3",
+						state:"Private",
 						link:'https://anhnendep.net/wp-content/uploads/2018/10/anh-gai-dep-diu-dang-8.jpg'
 					}
 				]
