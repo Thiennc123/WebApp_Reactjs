@@ -17,7 +17,7 @@ class App extends React.Component
 			this.state = {
 				photos:[
 					{
-						id: 1,
+						id: 1,anh
 						title: "photo1",
 						discrit: "day la anh 1",
 						state:"Public",
