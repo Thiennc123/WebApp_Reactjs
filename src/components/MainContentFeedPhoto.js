@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 // import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 import ItemPhoto from './ItemPhoto';
 
@@ -13,16 +14,62 @@ class MainContentFeedPhoto extends Component {
 	  };
 }
 
+	// componentWillMount()
+	// {
+	// 	// let dataFromStogare = JSON.parse(localStorage.getItem('photos'));
+
+	// 	// this.setState({
+	// 	// 	photos: dataFromStogare,
+	// 	// });
+	// 	axios.post('http://127.0.0.1:8000/api/auth/login', {
+	// 	    email: 'user2@gmail.com',
+	// 	    password: '123456',
+	// 	   }
+	// 	  // headers: {
+	// 		 //   Authorization: 'Bearer ' //the token is a variable which holds the token
+	// 		 // }
+	// 	  )
+	// 	  .then(function (response) {
+	// 	    localStorage.setItem("token", JSON.stringify(response.data.access_token));
+	// 	  })
+	// 	  .catch(function (error) {
+	// 	    console.log(error);
+	// 	  });
+
+
+	// }
+
 	componentWillMount()
 	{
-		let dataFromStogare = JSON.parse(localStorage.getItem('photos'));
+		 let dataFromStogare = JSON.parse(localStorage.getItem('token'));
 
-		this.setState({
-			photos: dataFromStogare,
-		});
+		// this.setState({
+		// 	photos: dataFromStogare,
+		// });
+		
+		var temp = this;
+		axios.get('http://127.0.0.1:8000/api/auth/showPhoto',
+		    {
+		    	headers: {
+			   	    Authorization: 'Bearer ' + dataFromStogare
+				},
+			}
+		)
+		  .then(function (response) {
+		  	
+		    temp.setState({
+		    	photos: Array.from(response.data.data)
+		    });
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
+
+
 	}
 
   render() {
+  	
   	var photos = this.state.photos.map((photo, index)=>{
   		return <ItemPhoto
   				key={photo.id} 

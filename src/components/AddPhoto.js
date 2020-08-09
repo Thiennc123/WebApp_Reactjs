@@ -137,7 +137,7 @@ class AddPhoto extends Component {
 }
 
 const mapStateToProps = (state) =>{
-	console.log(state.photo);
+	
 };
 
 const mapDispatchToProps = (dispatch, props) =>{

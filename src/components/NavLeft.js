@@ -16,9 +16,9 @@ class NavLeft extends Component {
       
     <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2  mt-5">
 	 		<ul className="main_tab">
-				<li><NavLink activeClassName="btn-primary" exact to="/Feed" className="btn btn-muted ">Feed</NavLink></li>
-		 		<li><NavLink activeClassName="btn-primary" exact to="/MyPhoto" className="btn btn-muted ">MyPhoto</NavLink></li>
-		 		<li className="tab_Album" data-ajax ="NUS_Feeds_feeds.html">My Album</li>
+				<li><NavLink activeClassName="btn-primary"  to="/Feed" className="btn btn-muted ">Feed</NavLink></li>
+		 		<li><NavLink activeClassName="btn-primary"  to="/MyPhoto" className="btn btn-muted ">MyPhoto</NavLink></li>
+        <li><NavLink activeClassName="btn-primary"  to="/MyAlbum" className="btn btn-muted ">MyAlbum</NavLink></li>
 
 	 		</ul>
 	 	</div>

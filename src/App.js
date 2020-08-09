@@ -5,8 +5,24 @@ import './App.css';
 import Menu from './components/Menu';
 
 import Body from './components/Body';
+import Login from './components/Login';
 
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import MainContentFeed from './components/MainContentFeed';
+import MainContent from './components/MainContentFeed';
+
+import Register from './components/Register';
+
+import Authentication from './components/Authentication';
+
+
+import NavLeft from './components/NavLeft';
+
+import MainContentFeedPhoto from './components/MainContentFeedPhoto';
+import MainContentFeedAlbum from './components/MainContentFeedAlbum';
+
+
+
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
 class App extends React.Component
 {
@@ -48,16 +64,24 @@ class App extends React.Component
 
 	render()
     {
-		localStorage.setItem("photos", JSON.stringify(this.state.photos));
+		
     	return (
 			<Router>
 			    <div className="container-fullwidth">
-			    	
-			    	<Menu/>
-
-			    	<Body/>
+   
+			    		
+				          
+				       <Switch>
+			    		<Route path="/Login" component={Login}/>
+			    		<Route path = "/Register" component = {Register} />
+			    		<Route path="/" component={Body}/>
+			    		</Switch>
 			    </div>
+			   
 			</Router>
+
+
+
 		);
     }
 }

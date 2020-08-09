@@ -2,12 +2,39 @@ import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
 
+import axios from 'axios';
 class MainContentFeedAlbum extends Component {
 
  constructor(props) {
     super(props);
     
   }
+
+ //  componentWillMount()
+	// {
+	// 	 let dataFromStogare = JSON.parse(localStorage.getItem('token'));
+
+	// 	// this.setState({
+	// 	// 	photos: dataFromStogare,
+	// 	// });
+	// 	console.log(dataFromStogare);
+
+	// 	axios.get('http://127.0.0.1:8000/api/auth/showPhoto',
+	// 	    {
+	// 	    	headers: {
+	// 		   	    Authorization: 'Bearer ' + dataFromStogare
+	// 			},
+	// 		}
+	// 	)
+	// 	  .then(function (response) {
+	// 	    console.log(response);
+	// 	  })
+	// 	  .catch(function (error) {
+	// 	    console.log(error);
+	// 	  });
+
+
+	// }
 
   render() {
     return (
